@@ -90,6 +90,7 @@ class FetchAndStoreNewsAPI(APIView):
             )
 
         data = response.json()
+        print(data)
         articles = data.get("articles", [])
         stored = []
         for item in articles:
