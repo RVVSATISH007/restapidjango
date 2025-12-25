@@ -127,6 +127,7 @@ class ArticleListAPI(APIView):
 
     def get(self, request):
         articles = Article.objects.all().order_by("-published_at")
+        print(articles)
 
         serializer = ArticleSerializer(articles, many=True)
 
